@@ -28,7 +28,7 @@ class App {
       router.post('/', (req: Request, res: Response) => {
         const data = req.body;
         if (data.message){
-          res.status(200).send({message: "Here's your message: " + data.message});
+          res.status(200).send({message: "Your message: " + data.message});
         } else {
           res.status(500).send({ error: "You needed to send a JSON object with a 'message' key " })
         }
