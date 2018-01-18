@@ -1,0 +1,26 @@
+{
+  "name": "typescript-express-rest",
+  "version": "1.0.0",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc-watch --onSuccess 'npm run clean-start'",
+    "dev-start": "ts-node ./src/server.ts & echo $! > dev-server.pid",
+    "clean-start": "./dev-clean.sh && npm run dev-start",
+    "stop": "./dev-clean.sh",
+    "start": "node ./dist/server.js",
+    "prod": "npm run build && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.11.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "tsc-watch": "^1.0.14"
+  },
+  "description": "Simple Typescript Setup for creating rest service. With ExpressJS."
+}
